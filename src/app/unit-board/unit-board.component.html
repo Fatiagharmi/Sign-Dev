@@ -1,0 +1,38 @@
+
+
+<p-tabView>
+  <p-tabPanel [headerStyle]='{"padding": "0px"}' header="Unit board">
+    <div class="background">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- <div style="display:flex; justify-content:center" class="unit">
+            <i style="font-size: 5rem;" class="pi pi-plus-circle"></i>
+          </div> -->
+          <div class="unit" *ngFor="let unit of units" (click)="toUnitDetail()">
+            <div class="col-left">
+              <div class="unit-name">{{unit.name}}</div>
+              <div class="unit-description">{{unit.description}}</div>
+            </div>
+            <div class="col-right">
+              <div class="unit-status" *ngIf="unit.status == 'In Progress'">
+                <i style="font-size:3rem" class="pi pi-spinner pi-spin"></i>
+              </div>
+              <div class="unit-status" *ngIf="unit.status == 'Finished'">
+                <i style="font-size:3rem" class="pi pi-check-circle"></i>
+              </div>
+              <div class="unit-status">{{unit.status}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+    </div>
+  </p-tabPanel>
+  <p-tabPanel header="Calendar">
+    <full-calendar
+      *ngIf="calendarOptions"
+      #fullcalendar
+      [options]="calendarOptions"
+    ></full-calendar>
+  </p-tabPanel>
+</p-tabView>

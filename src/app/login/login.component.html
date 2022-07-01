@@ -1,0 +1,15 @@
+<div class="container">
+  <p-card class="formContainer">
+    <h1>Connexion</h1>
+    <span class="p-float-label formItem">
+      <input id="float-input" type="text" pInputText [(ngModel)]="email" />
+      <label for="float-input">Email</label>
+    </span>
+    <span class="p-float-label formItem">
+      <p-password [(ngModel)]="password" [feedback]="false"></p-password>
+      <label for="float-input" type="password">Password</label>
+    </span>
+    <span *ngIf="logError" class="error formItem">Une erreur est survenue, veuillez vérifier vos identifiants</span>
+    <p-button class="index formItem" label="Connexion" (click)="submit()"></p-button>
+  </p-card>
+</div>

@@ -1,0 +1,11 @@
+<div class="signing-page" [ngStyle]="{ backgroundColor: '#3E92CF' }">
+  <h1 [ngStyle]="{ color: '#FE8D50' }">Signature</h1>
+  <div class="signing-container">
+    <canvas #canvas (touchstart)="startDrawing($event)" (touchmove)="moved($event)"></canvas>
+  </div>
+  <span class="p-buttonset">
+    <button pButton type="button" class="p-button-raised" label="Valider" icon="pi pi-check" (click)="savePad()"></button>
+    <button pButton type="button" class="p-button-raised" label="Effacer" icon="pi pi-times" (click)="clearPad()"></button>
+  </span>
+  <img src="{{ signatureImg }}" />
+</div>

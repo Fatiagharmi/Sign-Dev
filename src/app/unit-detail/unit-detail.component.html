@@ -1,0 +1,39 @@
+<div class="unitInfoContainer">
+  <p-toast position="top-center"></p-toast>
+  <div *ngIf="isOpen" class="unitInfo">
+    <h2>Nom du module</h2>
+    <div class="signingChoice">
+      <div class="attendance">
+        <span>Présent: 18 / 20</span>
+        <span>Absent: 2 / 20</span>
+      </div>
+      <i class="pi pi-telegram" (click)="sendEmail()" style="cursor: pointer; font-size: 2rem; color: #fe8d50"></i>
+      <i class="pi pi-qrcode" (click)="toQrcodeView()" style="cursor: pointer; font-size: 2rem; color: #fe8d50"></i>
+      <i class="pi pi-angle-double-left" (click)="toUnitsView()" style="cursor: pointer; font-size: 2rem; color: #fe8d50"></i>
+      <i class="pi pi-times" (click)="endUnit()" style="cursor: pointer; font-size: 2rem; color: red"></i>
+    </div>
+  </div>
+  <div *ngIf="!isOpen" class="isOpenContainer">
+    <h3>Cette session n'est pas encore ouverte</h3>
+    <p-button label="Ouvrir le module" (click)="openUnit()"></p-button>
+  </div>
+</div>
+<div *ngIf="isOpen" class="container">
+  <ul>
+    <li *ngFor="let student of studentList">
+      <div class="students">
+        <div class="student">
+          <img class="img" [src]="student.imgPath" />
+          <div class="noms">
+            <p class="nom">{{ student.lastname }}</p>
+            <p class="prenom">{{ student.firstname }}</p>
+          </div>
+          <div class="icons">
+            <p class="pi pi-times-circle icon" style="font-size: 1.5rem"></p>
+            <p class="pi pi-pencil icon" style="font-size: 1.5rem"></p>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

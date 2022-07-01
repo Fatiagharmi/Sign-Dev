@@ -1,0 +1,109 @@
+.unitInfoContainer {
+  font-family: sans-serif;
+
+  .unitInfo {
+    width: 100%;
+    background-color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    box-shadow: 0 5px 6px #00000046;
+
+    h2 {
+      margin-left: 3%;
+    }
+    .signingChoice {
+      margin-right: 3%;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 25%;
+
+      .attendance {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @media screen and (max-width: 660px) {
+        width: 60%;
+      }
+    }
+  }
+
+  .isOpenContainer {
+    margin-left: 3%;
+    width: 75%;
+  }
+}
+
+.container {
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+  margin-left: 0%;
+
+  .students {
+    height: 142px;
+    width: 33%;
+    border-radius: 0px;
+    float: left;
+    margin-top: 20px;
+  }
+
+  .student {
+    background-color: #141d37;
+    height: 100%;
+    width: 80%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    padding-top: 3%;
+    margin-left: 10%;
+  }
+
+  .img {
+
+    float: left;
+    height: 80px;
+    width: 80px;
+    margin-top: 2%;
+  }
+
+  .noms {
+    padding-left: 8%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .prenom,
+  .nom {
+    color: #ffffff;
+    font-size: 1.2em;
+    margin-top: 25%;
+  }
+
+  .icons {
+    float: right;
+    // background-color: aquamarine;
+    width: 25%;
+    height: 100%;
+  }
+
+  .icon {
+    margin-top: 10%;
+    padding-right: 25px;
+    cursor: pointer;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  ul {
+    margin: auto;
+    margin-right: 7%;
+  }
+}

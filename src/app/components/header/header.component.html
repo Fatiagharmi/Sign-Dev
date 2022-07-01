@@ -1,0 +1,11 @@
+<div class="header">
+  <div class="title">
+    <img src="../../assets/png/logo_ulrich.png" alt="logo_ulrich" />
+                        
+    <p *ngIf="isLoggedIn" class="userType">[Intervenants]</p>
+  </div>
+  <div class="loggedInfo" *ngIf="isLoggedIn">
+    <p>Nom Prénom</p>
+    <p class="logout" (click)="logout()">Déconnexion</p>
+  </div>
+</div>
